@@ -19,7 +19,7 @@
 </template>
 <script>
 export default {
-  name: "nav"
+  name: "pageNav"
 };
 </script>
 <style lang="scss" scoped>

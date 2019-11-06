@@ -5,7 +5,7 @@
 </template>
 <script>
 export default {
-  name: "footer"
+  name: "pageFooter"
 };
 </script>
 <style lang="scss">

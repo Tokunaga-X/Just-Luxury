@@ -1,6 +1,6 @@
 <template>
   <div class="upSwiper">
-    <swiper :option="swiperOption">
+    <swiper :options="swiperOption">
       <swiper-slide class="us1 us">
         <p class="introWordSmall animated fadeInUp delay1">奢华 | 之美</p>
         <p class="introWordBig animated fadeInUp delay2">无与伦比 一 享受</p>
@@ -27,16 +27,19 @@ export default {
   },
   data() {
     return {
-      swiperOption: {},
-      on: {
-        init: function() {
+      swiperOption: {
+        grabCursor: true,
+        loop: true,
+        speed: 700,
+        autoplay: {
+          delay: 5000
         }
       }
     };
   }
 };
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
 .us {
   width: 100vw;
   height: 90vh;
@@ -50,10 +53,22 @@ export default {
   .introWordSmall {
     font-weight: 100;
     font-size: 1.5rem;
+    @media screen and (max-width: 1000px) {
+      font-size: 1.25rem;
+    }
+    @media screen and (max-width: 500px) {
+      font-size: 1rem;
+    }
   }
   .introWordBig {
     font-weight: bolder;
     font-size: 6rem;
+    @media screen and (max-width: 1000px) {
+      font-size: 4.5rem;
+    }
+    @media screen and (max-width: 500px) {
+      font-size: 3rem;
+    }
   }
   p {
     z-index: 4;
