@@ -1,24 +1,11 @@
-# vue-shop
+## 介绍
+学习Vue时制作的购物网站，旨在借用vue三件套实现购物车功能，用express构建了一个简单的后台对MongoDB数据库进行操作。
 
-## Project setup
-```
-npm install
-```
+## 现状展示
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+<img src="" width="50%" alt="show" />
 
-### Compiles and minifies for production
-```
-npm run build
-```
+## 下载本地运行
 
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+1. npm install
+2. npm run serve
