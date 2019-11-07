@@ -45,7 +45,8 @@
       "@vue/prettier"
     ],
     "rules": {
-      "no-console": "off"
+      "no-console": "off",
+      "prettier/prettier": []
     },
     "parserOptions": {
       "parser": "babel-eslint"

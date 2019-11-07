@@ -4,15 +4,24 @@
     <ul class="cards">
       <li class="card1">
         <h2>Fancy House</h2>
-        <p>We have the most incredible houses in the world for sale. You will find you dream house here, for sure.</p>
+        <p>
+          We have the most incredible houses in the world for sale. You will
+          find you dream house here, for sure.
+        </p>
       </li>
       <li class="card2">
         <h2>Insane Car</h2>
-        <p>We have the most incredible cars in the world for sale. You will find you dream house here, for sure.</p>
+        <p>
+          We have the most incredible cars in the world for sale. You will find
+          you dream house here, for sure.
+        </p>
       </li>
       <li class="card3">
         <h2>Fantastic Boat</h2>
-        <p>We have the most incredible boats in the world for sale. You will find you dream house here, for sure.</p>
+        <p>
+          We have the most incredible boats in the world for sale. You will find
+          you dream house here, for sure.
+        </p>
       </li>
     </ul>
   </div>

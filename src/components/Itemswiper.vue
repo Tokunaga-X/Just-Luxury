@@ -5,7 +5,11 @@
       <swiper-slide class="swiper swiper2"></swiper-slide>
       <swiper-slide class="swiper swiper3"></swiper-slide>
     </swiper>
-    <swiper :options="swiperOptionThumbs" class="gallery-thumbs" ref="swiperThumbs">
+    <swiper
+      :options="swiperOptionThumbs"
+      class="gallery-thumbs"
+      ref="swiperThumbs"
+    >
       <swiper-slide class="swiper swiper1"></swiper-slide>
       <swiper-slide class="swiper swiper2"></swiper-slide>
       <swiper-slide class="swiper swiper3"></swiper-slide>

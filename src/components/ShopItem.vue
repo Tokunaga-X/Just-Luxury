@@ -1,9 +1,9 @@
 <template>
   <div class="shopitem">
-    <div class="pic" @click="drawer=true"></div>
+    <div class="pic" @click="drawer = true"></div>
     <div class="des">
-      <p class="name">{{name}}</p>
-      <p class="price">{{price}}</p>
+      <p class="name">{{ name }}</p>
+      <p class="price">{{ price }}</p>
     </div>
     <el-drawer
       v-bind:title="name"

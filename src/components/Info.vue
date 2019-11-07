@@ -1,5 +1,5 @@
 <template>
-  <div class="circle">{{count}}</div>
+  <div class="circle">{{ count }}</div>
 </template>
 <script>
 import store from "../store/index";

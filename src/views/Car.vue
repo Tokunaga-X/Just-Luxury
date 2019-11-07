@@ -8,44 +8,39 @@
         <div class="top3">Price</div>
         <div class="top4">Options</div>
       </div>
-      <div class="items" v-bind:key="item.id" v-for="item in getItem">
-        <div class="picture">{{item.pic}}</div>
-        <div class="name">{{item.name}}</div>
-        <div class="price">{{item.price}}</div>
+      <div class="items" v-bind:key="item.id" v-for="item in getItems">
+        <div class="picture">{{ item.pic }}</div>
+        <div class="name">{{ item.name }}</div>
+        <div class="price">{{ item.price }}</div>
         <div class="btns">
-          <el-button @click="deleteItem(item.id)" type="danger" icon="el-icon-delete" circle></el-button>
+          <el-button @click="deleteItem(item._id)" type="danger" icon="el-icon-delete" circle></el-button>
         </div>
       </div>
     </div>
-    <el-button @click="add" type="success" icon="el-icon-check" circle></el-button>
+    <el-button @click="addItem" type="success" icon="el-icon-check" circle></el-button>
     <Footer />
   </div>
 </template>
 <script>
 import Footer from "../components/Footer";
 import store from "../store/index.js";
-import uuid from "uuid";
+import { mapActions, mapGetters } from "vuex";
+
 export default {
-  data() {
-    return {};
-  },
   name: "car",
   components: {
     Footer
   },
   computed: {
+    ...mapGetters(["getItems"]),
     count() {
-      return store.getters.count;
-    },
-    getItem() {
-      return store.getters.getItem;
+      return store.getters.getCount;
     }
   },
   methods: {
-    add() {
+    ...mapActions(["fetchItems"]),
+    addItem() {
       store.dispatch("addItem", {
-        id: uuid.v4(),
-        pic: "",
         name: "RANGYAL ISLAND",
         price: "USD:200,000,000"
       });
@@ -53,6 +48,9 @@ export default {
     deleteItem(id) {
       store.dispatch("deleteItem", id);
     }
+  },
+  created() {
+    this.fetchItems();
   }
 };
 </script>
