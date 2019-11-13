@@ -3,25 +3,34 @@
     <h1>我们是谁？ 我们是你的奢侈品向导，这里有着你对奢华的所有想象。</h1>
     <ul class="cards">
       <li class="card1">
-        <h2>Fancy House</h2>
-        <p>
-          We have the most incredible houses in the world for sale. You will
-          find you dream house here, for sure.
-        </p>
+        <img src="../assets/introHouse.jpg" alt />
+        <div class="front">
+          <h2>Fancy House</h2>
+          <p>
+            We have the most incredible houses in the world for sale. You will
+            find you dream house here, for sure.
+          </p>
+        </div>
       </li>
       <li class="card2">
-        <h2>Insane Car</h2>
-        <p>
-          We have the most incredible cars in the world for sale. You will find
-          you dream house here, for sure.
-        </p>
+        <img src="../assets/introCar.jpg" alt />
+        <div class="front">
+          <h2>Insane Car</h2>
+          <p>
+            We have the most incredible cars in the world for sale. You will find
+            you dream house here, for sure.
+          </p>
+        </div>
       </li>
       <li class="card3">
-        <h2>Fantastic Boat</h2>
-        <p>
-          We have the most incredible boats in the world for sale. You will find
-          you dream house here, for sure.
-        </p>
+        <img src="../assets/introBoat.jpg" alt />
+        <div class="front">
+          <h2>Fantastic Boat</h2>
+          <p>
+            We have the most incredible boats in the world for sale. You will find
+            you dream house here, for sure.
+          </p>
+        </div>
       </li>
     </ul>
   </div>
@@ -42,9 +51,8 @@
   }
   .cards {
     list-style: none;
-    width: 85%;
-    margin: 3rem auto;
-    margin-right: 12svh;
+    width: 90%;
+    margin: 3rem 0;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     @media screen and (max-width: 1000px) {
@@ -55,7 +63,7 @@
     .card2,
     .card3 {
       flex: 1;
-      height: 60vh;
+      height: 65vh;
       background-size: cover;
       background-position: center;
       display: flex;
@@ -93,14 +101,31 @@
         }
       }
     }
-    .card1 {
-      background-image: url("../assets/introHouse.jpg");
-    }
-    .card2 {
-      background-image: url("../assets/introCar.jpg");
-    }
+    .card1,
+    .card2,
     .card3 {
-      background-image: url("../assets/introBoat.jpg");
+      position: relative;
+      overflow: hidden;
+      img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        z-index: -1;
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(1, 1, 1, 0.2);
+      }
+      .front {
+        z-index: 1;
+      }
     }
   }
 }

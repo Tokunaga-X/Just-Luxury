@@ -1,6 +1,8 @@
 <template>
   <div class="shopitem">
-    <div class="pic" @click="drawer = true"></div>
+    <div class="pic" @click="drawer = true">
+      <img src="../assets/item-house1.jpg" @load="loadImage" alt />
+    </div>
     <div class="des">
       <p class="name">{{ name }}</p>
       <p class="price">{{ price }}</p>
@@ -27,11 +29,18 @@ export default {
     return {
       drawer: false,
       direction: "btt",
-      size: "90%"
+      size: "90%",
+      handleClose: "handleClose",
+      imageShow: false
     };
   },
   name: "item",
-  props: ["price", "name"]
+  props: ["price", "name"],
+  methods: {
+    loadImage() {
+      this.imageShow = true;
+    }
+  }
 };
 </script>
 <style lang="scss" scoped>
@@ -45,10 +54,14 @@ export default {
 .pic {
   width: 100%;
   height: 80%;
-  background-image: url("../assets/item-house1.jpg");
-  background-size: cover;
-  background-position: center;
+  overflow: hidden;
+  // background-image: url("../assets/item-house1.jpg");
+  // background-size: cover;
+  // background-position: center;
   cursor: pointer;
+  img {
+    width: 100%;
+  }
 }
 .des {
   width: 100%;

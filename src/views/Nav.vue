@@ -1,6 +1,6 @@
 <template>
   <nav>
-    <img src="../assets/logo2.png" alt="logo" title="logo" />
+    <img src="../assets/logo2.png" @load="loadImage" alt="logo" title="logo" />
     <ul>
       <li class="animated fadeInDown delay1">
         <router-link to="/">主页</router-link>
@@ -19,7 +19,12 @@
 </template>
 <script>
 export default {
-  name: "pageNav"
+  name: "pageNav",
+  methods: {
+    loadImage() {
+      this.imageShow = true;
+    }
+  }
 };
 </script>
 <style lang="scss" scoped>
