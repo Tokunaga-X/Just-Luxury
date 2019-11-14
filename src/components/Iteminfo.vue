@@ -14,6 +14,7 @@
 </template>
 <script>
 import Itemswiper from "./Itemswiper";
+
 export default {
   name: "Iteminfo",
   components: {

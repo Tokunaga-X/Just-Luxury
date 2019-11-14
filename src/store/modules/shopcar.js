@@ -21,6 +21,7 @@ const actions = {
     state.commit("plus", payload);
   },
   addItem(state, payload) {
+    console.log(payload);
     fetch("http://localhost:5050/api/car/add", {
       method: "POST",
       headers: {

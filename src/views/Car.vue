@@ -17,7 +17,6 @@
         </div>
       </div>
     </div>
-    <el-button @click="addItem" type="success" icon="el-icon-check" circle></el-button>
     <Footer />
   </div>
 </template>
@@ -39,12 +38,6 @@ export default {
   },
   methods: {
     ...mapActions(["fetchItems"]),
-    addItem() {
-      store.dispatch("addItem", {
-        name: "RANGYAL ISLAND",
-        price: "USD:200,000,000"
-      });
-    },
     deleteItem(id) {
       store.dispatch("deleteItem", id);
     }

@@ -36,6 +36,12 @@
   </div>
 </template>
 
+<script>
+export default {
+  name: "intro"
+};
+</script>
+
 <style lang="scss">
 .intro {
   width: 100vw;
