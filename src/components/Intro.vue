@@ -17,8 +17,8 @@
         <div class="front">
           <h2>Insane Car</h2>
           <p>
-            We have the most incredible cars in the world for sale. You will find
-            you dream house here, for sure.
+            We have the most incredible cars in the world for sale. You will
+            find you dream house here, for sure.
           </p>
         </div>
       </li>
@@ -27,8 +27,8 @@
         <div class="front">
           <h2>Fantastic Boat</h2>
           <p>
-            We have the most incredible boats in the world for sale. You will find
-            you dream house here, for sure.
+            We have the most incredible boats in the world for sale. You will
+            find you dream house here, for sure.
           </p>
         </div>
       </li>
