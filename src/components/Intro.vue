@@ -140,7 +140,16 @@ export default {
         }
       }
     }
-    .card1,
+    .card1 {
+      img {
+        width: auto;
+        height: 100%;
+        @media screen and (max-width: 1000px) {
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
     .card2 {
       img {
         @media screen and (max-width: 1130px) {

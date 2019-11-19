@@ -21,7 +21,9 @@
         </el-select>
       </div>
       <div class="btnContainer">
-        <el-button type="success" class="btn">帮我查找</el-button>
+        <router-link to="/shop">
+          <el-button type="success" class="btn">帮我查找</el-button>
+        </router-link>
       </div>
     </div>
     <Intro />
@@ -97,7 +99,7 @@ export default {
   top: 90%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 5;
+  z-index: 4;
   display: flex;
   flex-direction: column;
   justify-content: center;
