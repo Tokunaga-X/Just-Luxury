@@ -64,7 +64,7 @@ export default {
     @media screen and (max-width: 1000px) {
       grid-template-columns: repeat(1, 1fr);
     }
-    grid-gap: 2rem;
+    grid-gap: 1rem;
     .card1,
     .card2,
     .card3 {
@@ -102,7 +102,7 @@ export default {
           transition: all 0.1s ease-in-out;
         }
         p {
-          transform: translateY(50%);
+          transform: translateY(30%);
           opacity: 1;
         }
       }
@@ -131,6 +131,21 @@ export default {
       }
       .front {
         z-index: 1;
+      }
+    }
+    .card3 {
+      img {
+        @media screen and (max-width: 1252px) {
+          width: 130%;
+        }
+      }
+    }
+    .card1,
+    .card2 {
+      img {
+        @media screen and (max-width: 1130px) {
+          width: 120%;
+        }
       }
     }
   }

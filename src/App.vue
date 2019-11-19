@@ -23,6 +23,7 @@ export default {
 }
 #app {
   font-family: "ZCOOL XiaoWei", serif;
+  font-display: swap;
   text-align: center;
   box-sizing: border-box;
   width: 100%;
