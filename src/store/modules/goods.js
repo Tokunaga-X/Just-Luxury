@@ -9,6 +9,7 @@ const getters = {
 const actions = {
   async fetchGoods(state) {
     fetch("http://localhost:5050/api/goods")
+    // fetch("http://106.15.88.174/:5050/api/goods")
       .then(res => res.json())
       .then(data => {
         state.commit("setGoods", data);
