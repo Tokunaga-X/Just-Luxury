@@ -1,9 +1,24 @@
 <template>
   <div class="page">
     <div class="contact">
-      <el-input class="input" v-model="name" placeholder="名字" clearable></el-input>
-      <el-input class="input" v-model="phone" placeholder="电话" clearable></el-input>
-      <el-input class="input" v-model="mail" placeholder="邮箱" clearable></el-input>
+      <el-input
+        class="input"
+        v-model="name"
+        placeholder="名字"
+        clearable
+      ></el-input>
+      <el-input
+        class="input"
+        v-model="phone"
+        placeholder="电话"
+        clearable
+      ></el-input>
+      <el-input
+        class="input"
+        v-model="mail"
+        placeholder="邮箱"
+        clearable
+      ></el-input>
       <el-input
         class="info"
         type="textarea"
@@ -12,7 +27,9 @@
         placeholder="具体信息"
         clearable
       ></el-input>
-      <el-button class="btn" type="primary" @click="checkInput">提交你的意见</el-button>
+      <el-button class="btn" type="primary" @click="checkInput"
+        >提交你的意见</el-button
+      >
     </div>
   </div>
 </template>
@@ -27,7 +44,6 @@ export default {
     };
   },
   name: "contact",
-
   methods: {
     checkInput() {
       console.log(this.name, this.phone);

@@ -12,7 +12,12 @@
         <div class="name">{{ item.name }}</div>
         <div class="price">{{ item.price }}</div>
         <div class="btns">
-          <el-button @click="deleteItem(item._id)" type="danger" icon="el-icon-delete" circle></el-button>
+          <el-button
+            @click="deleteItem(item._id)"
+            type="danger"
+            icon="el-icon-delete"
+            circle
+          ></el-button>
         </div>
       </div>
     </div>

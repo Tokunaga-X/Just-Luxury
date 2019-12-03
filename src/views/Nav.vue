@@ -1,7 +1,12 @@
 <template>
   <div class="navContainer">
     <nav>
-      <img src="../assets/logo2.png" @load="loadImage" alt="logo" title="logo" />
+      <img
+        src="../assets/logo2.png"
+        @load="loadImage"
+        alt="logo"
+        title="logo"
+      />
       <ul>
         <li class="animated fadeInDown delay1">
           <router-link to="/">主页</router-link>

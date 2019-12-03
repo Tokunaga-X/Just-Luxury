@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <Loading v-if="loading" />
     <Nav />
     <div class="content">
       <transition
@@ -18,10 +19,22 @@
 <script>
 import Nav from "./views/Nav";
 import Footer from "./views/Footer";
+import Loading from "./components/Loading";
 export default {
+  data() {
+    return {
+      loading: true
+    };
+  },
+  mounted() {
+    setTimeout(() => {
+      this.loading = false;
+    }, 1000);
+  },
   components: {
     Nav,
-    Footer
+    Footer,
+    Loading
   }
 };
 </script>
