@@ -27,15 +27,12 @@
       </div>
     </div>
     <Intro />
-    <Footer />
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
 import Swiper from "../components/upSwiper";
 import Intro from "../components/Intro";
-import Footer from "../components/Footer";
 export default {
   name: "home",
   data() {
@@ -82,8 +79,7 @@ export default {
   },
   components: {
     Swiper,
-    Intro,
-    Footer
+    Intro
   }
 };
 </script>

@@ -1,21 +1,24 @@
 <template>
-  <nav>
-    <img src="../assets/logo2.png" @load="loadImage" alt="logo" title="logo" />
-    <ul>
-      <li class="animated fadeInDown delay1">
-        <router-link to="/">主页</router-link>
-      </li>
-      <li class="animated fadeInDown delay2">
-        <router-link to="/shop">选购</router-link>
-      </li>
-      <li class="animated fadeInDown delay3">
-        <router-link to="/car">购物车</router-link>
-      </li>
-      <li class="animated fadeInDown delay4">
-        <router-link to="/contact">联系</router-link>
-      </li>
-    </ul>
-  </nav>
+  <div class="navContainer">
+    <nav>
+      <img src="../assets/logo2.png" @load="loadImage" alt="logo" title="logo" />
+      <ul>
+        <li class="animated fadeInDown delay1">
+          <router-link to="/">主页</router-link>
+        </li>
+        <li class="animated fadeInDown delay2">
+          <router-link to="/shop">选购</router-link>
+        </li>
+        <li class="animated fadeInDown delay3">
+          <router-link to="/car">购物车</router-link>
+        </li>
+        <li class="animated fadeInDown delay4">
+          <router-link to="/contact">联系</router-link>
+        </li>
+      </ul>
+    </nav>
+    <div class="topPic"></div>
+  </div>
 </template>
 <script>
 export default {
@@ -28,6 +31,7 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
+@import "https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css";
 nav {
   position: fixed;
   top: 0;
@@ -96,5 +100,24 @@ nav {
     flex: 1;
     padding-left: 5vw;
   }
+}
+.topPic {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 35vh;
+  background: url("../assets/japanstreet.jpg");
+  background-size: cover;
+  background-position: top;
+}
+.topPic::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 35vh;
+  background: rgba(0, 0, 0, 0.4);
 }
 </style>

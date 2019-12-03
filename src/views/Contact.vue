@@ -1,25 +1,9 @@
 <template>
-  <div>
-    <div class="topPic"></div>
+  <div class="page">
     <div class="contact">
-      <el-input
-        class="input"
-        v-model="name"
-        placeholder="名字"
-        clearable
-      ></el-input>
-      <el-input
-        class="input"
-        v-model="phone"
-        placeholder="电话"
-        clearable
-      ></el-input>
-      <el-input
-        class="input"
-        v-model="mail"
-        placeholder="邮箱"
-        clearable
-      ></el-input>
+      <el-input class="input" v-model="name" placeholder="名字" clearable></el-input>
+      <el-input class="input" v-model="phone" placeholder="电话" clearable></el-input>
+      <el-input class="input" v-model="mail" placeholder="邮箱" clearable></el-input>
       <el-input
         class="info"
         type="textarea"
@@ -28,16 +12,11 @@
         placeholder="具体信息"
         clearable
       ></el-input>
-      <el-button class="btn" type="primary" @click="checkInput"
-        >提交你的意见</el-button
-      >
+      <el-button class="btn" type="primary" @click="checkInput">提交你的意见</el-button>
     </div>
-    <Footer />
   </div>
 </template>
 <script>
-import Footer from "../components/Footer";
-
 export default {
   data() {
     return {
@@ -48,9 +27,7 @@ export default {
     };
   },
   name: "contact",
-  components: {
-    Footer
-  },
+
   methods: {
     checkInput() {
       console.log(this.name, this.phone);
@@ -61,21 +38,8 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-.topPic {
-  width: 100%;
-  height: 35vh;
-  background: url("../assets/japanstreet.jpg");
-  background-size: cover;
-  background-position: top;
-}
-.topPic::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 35vh;
-  background: rgba(0, 0, 0, 0.4);
+.page {
+  margin-top: 35vh;
 }
 .contact {
   display: flex;

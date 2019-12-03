@@ -1,6 +1,5 @@
 <template>
-  <div>
-    <div class="topPic"></div>
+  <div class="page">
     <div class="car">
       <div class="top">
         <div class="top1">Picture</div>
@@ -13,28 +12,19 @@
         <div class="name">{{ item.name }}</div>
         <div class="price">{{ item.price }}</div>
         <div class="btns">
-          <el-button
-            @click="deleteItem(item._id)"
-            type="danger"
-            icon="el-icon-delete"
-            circle
-          ></el-button>
+          <el-button @click="deleteItem(item._id)" type="danger" icon="el-icon-delete" circle></el-button>
         </div>
       </div>
     </div>
-    <Footer />
   </div>
 </template>
 <script>
-import Footer from "../components/Footer";
 import store from "../store/index.js";
 import { mapActions, mapGetters } from "vuex";
 
 export default {
   name: "car",
-  components: {
-    Footer
-  },
+
   computed: {
     ...mapGetters(["getItems"]),
     count() {
@@ -53,25 +43,12 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-.topPic {
-  width: 100%;
-  height: 35vh;
-  background: url("../assets/japanstreet.jpg");
-  background-size: cover;
-  background-position: top;
-}
-.topPic::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 35vh;
-  background: rgba(0, 0, 0, 0.4);
+.page {
+  margin-top: 35vh;
 }
 .car {
   width: 100vw;
-  height: 100%;
+  min-height: 48vh;
   display: flex;
   flex-direction: column;
   margin: 2rem 0;
