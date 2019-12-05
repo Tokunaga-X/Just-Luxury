@@ -42,7 +42,6 @@
   border-radius: 10%;
   overflow: hidden;
   background: transparent;
-
   animation: circles-to-rhombuses-animation 1200ms linear infinite;
 }
 

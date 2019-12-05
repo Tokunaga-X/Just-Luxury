@@ -12,9 +12,6 @@ export default {
 footer {
   width: 100vw;
   height: 12vh;
-  // position: absolute;
-  // left: 0;
-  // bottom: 0;
   background: rgba(0, 0, 0, 0.8);
   display: flex;
   justify-content: center;
